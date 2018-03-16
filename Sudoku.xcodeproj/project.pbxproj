@@ -13,6 +13,8 @@
 		678AFC41205B580F003FCD26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 678AFC40205B580F003FCD26 /* Assets.xcassets */; };
 		678AFC44205B580F003FCD26 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 678AFC42205B580F003FCD26 /* LaunchScreen.storyboard */; };
 		678AFC47205B580F003FCD26 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 678AFC46205B580F003FCD26 /* main.m */; };
+		678AFC4E205B5FD2003FCD26 /* app.plist in Resources */ = {isa = PBXBuildFile; fileRef = 678AFC4D205B5FD2003FCD26 /* app.plist */; };
+		678AFC51205B64E5003FCD26 /* AppModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 678AFC50205B64E5003FCD26 /* AppModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,9 @@
 		678AFC43205B580F003FCD26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		678AFC45205B580F003FCD26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		678AFC46205B580F003FCD26 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		678AFC4D205B5FD2003FCD26 /* app.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = app.plist; sourceTree = "<group>"; };
+		678AFC4F205B64E5003FCD26 /* AppModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppModel.h; sourceTree = "<group>"; };
+		678AFC50205B64E5003FCD26 /* AppModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +67,9 @@
 				678AFC38205B580F003FCD26 /* AppDelegate.m */,
 				678AFC3A205B580F003FCD26 /* ViewController.h */,
 				678AFC3B205B580F003FCD26 /* ViewController.m */,
+				678AFC4D205B5FD2003FCD26 /* app.plist */,
+				678AFC4F205B64E5003FCD26 /* AppModel.h */,
+				678AFC50205B64E5003FCD26 /* AppModel.m */,
 				678AFC3D205B580F003FCD26 /* Main.storyboard */,
 				678AFC40205B580F003FCD26 /* Assets.xcassets */,
 				678AFC42205B580F003FCD26 /* LaunchScreen.storyboard */,
@@ -129,6 +137,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				678AFC4E205B5FD2003FCD26 /* app.plist in Resources */,
 				678AFC44205B580F003FCD26 /* LaunchScreen.storyboard in Resources */,
 				678AFC41205B580F003FCD26 /* Assets.xcassets in Resources */,
 				678AFC3F205B580F003FCD26 /* Main.storyboard in Resources */,
@@ -145,6 +154,7 @@
 				678AFC3C205B580F003FCD26 /* ViewController.m in Sources */,
 				678AFC47205B580F003FCD26 /* main.m in Sources */,
 				678AFC39205B580F003FCD26 /* AppDelegate.m in Sources */,
+				678AFC51205B64E5003FCD26 /* AppModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

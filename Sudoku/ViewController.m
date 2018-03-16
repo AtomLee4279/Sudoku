@@ -7,16 +7,46 @@
 //
 
 #import "ViewController.h"
-
+#import "AppModel.h"
 @interface ViewController ()
-
+@property(nonatomic,strong) NSArray* apps;
 @end
 
 @implementation ViewController
 
+//懒加载
+-(NSArray*)apps
+{
+    if(_apps==nil)
+    {
+        NSString* path = [[NSBundle mainBundle] pathForResource:@"app" ofType:@"plist"];
+        NSArray* dictArray = [NSArray arrayWithContentsOfFile:path];
+        NSMutableArray *tempArray = [NSMutableArray array];
+        for(NSDictionary*dict in dictArray)
+        {
+            AppModel * appmodel = [[AppModel alloc] init];
+            appmodel.name = dict[@"name"];
+            appmodel.icon = dict[@"icon"];
+            [tempArray addObject:appmodel];
+        }
+        _apps = tempArray;
+    }
+    return _apps;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    for(int i =0;i<self.apps.count;i++)
+    {
+        CGFloat appViewX = 30+i*10;
+        CGFloat appViewY = 30;
+        CGFloat appviewW = 100;
+        CGFloat appviewH = 120;
+        UIView *appView = [[UIView alloc] init];
+        appView.frame = CGRectMake(appViewX, appViewY, appviewW, appviewH);
+        appView.backgroundColor = [UIColor blueColor];
+        [self.view addSubview:appView];
+    }
 }
 
 
