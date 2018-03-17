@@ -47,13 +47,38 @@
     {
         int col = i%3;
         int row = i/3;
+        //生成格子
         UIView *appView = [[UIView alloc] init ];
         //设置格子位置，尺寸
         CGFloat appViewX = XMargin+col*(appviewW+spaceXMargin);
         CGFloat appViewY = YMargin+row*(appviewH+spaceYMargin);
         appView.frame = CGRectMake(appViewX,appViewY, appviewW, appviewH);
         appView.backgroundColor = [UIColor blueColor];
+        
+        //生成图片并添加进格子父控件中
+        UIImageView* imageView = [[UIImageView alloc]init];
+        //设置图片位置居中于父控件
+        CGFloat imageW = 50;
+        CGFloat imageH = 50;
+        CGFloat imageX = (appviewW-imageW)*0.5;
+        CGFloat imageY = 0;
+        imageView.frame = CGRectMake(imageX, imageY, imageW, imageH);
+        imageView.backgroundColor = [UIColor redColor];
+        [appView addSubview:imageView];
+        
+        //生成文本label并添加进格子父控件中
+        UILabel* label = [[UILabel alloc]init];
+        //设置文本框长度与父控件宽度一致，位置暂定为紧靠图片控件之下
+        CGFloat labelW = appviewW;
+        CGFloat labelH = 10;
+        CGFloat labelx = 0;
+        CGFloat offset = 0;//文本框相对于图片控件高度的偏移量，独立出来以便后续改需求
+        CGFloat labely = imageH+offset;
+        label.frame = CGRectMake(labelx, labely, labelW, labelH);
+        label.backgroundColor = [UIColor grayColor];
+        [appView addSubview:label];
         [self.view addSubview:appView];
+        //
     }
 }
 
