@@ -11,4 +11,7 @@
 @interface AppModel : NSObject
 @property(nonatomic,copy)NSString* name;
 @property(nonatomic,copy)NSString* icon;
+//传入字典，返回该模型类
+-(instancetype)initWithDict:(NSDictionary*)dict;
++(instancetype)appModelWithDict:(NSDictionary*)dict;
 @end

@@ -25,9 +25,7 @@
         NSMutableArray *tempArray = [NSMutableArray array];
         for(NSDictionary*dict in dictArray)
         {
-            AppModel * appmodel = [[AppModel alloc] init];
-            appmodel.name = dict[@"name"];
-            appmodel.icon = dict[@"icon"];
+            AppModel * appmodel = [AppModel appModelWithDict:dict];
             [tempArray addObject:appmodel];
         }
         _apps = tempArray;
