@@ -11,31 +11,31 @@
 	<dict>
 		<key>name</key>
 		<string>B1</string>
-		<key> icon</key>
+		<key>icon</key>
 		<string>2</string>
 	</dict>
 	<dict>
 		<key>name</key>
 		<string>C1</string>
-		<key> icon</key>
+		<key>icon</key>
 		<string>3</string>
 	</dict>
 	<dict>
 		<key>name</key>
 		<string>A2</string>
-		<key> icon</key>
+		<key>icon</key>
 		<string>2</string>
 	</dict>
 	<dict>
 		<key>name</key>
 		<string>B2</string>
-		<key> icon</key>
+		<key>icon</key>
 		<string>2</string>
 	</dict>
 	<dict>
 		<key>name</key>
 		<string>C2</string>
-		<key> icon</key>
+		<key>icon</key>
 		<string>2</string>
 	</dict>
 	<dict>
