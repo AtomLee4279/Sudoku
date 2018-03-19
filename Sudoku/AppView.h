@@ -7,12 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "AppModel.h"
+@class AppModel;
 @interface AppView : UIView
 
 @property (weak, nonatomic) IBOutlet UIImageView *image;
 @property (weak, nonatomic) IBOutlet UILabel *label;
-@property(strong,atomic)AppModel* appModel;
+@property(strong,nonatomic)AppModel* appModel;
 -(void)initWithAppModel:(AppModel*)appModel;
 //此处重写了AppModel的set方法
 -(void)setAppModel:(AppModel *)appModel;

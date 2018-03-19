@@ -7,7 +7,7 @@
 //
 
 #import "AppView.h"
-
+#import "AppModel.h"
 @implementation AppView
 
 -(void)initWithAppModel:(AppModel*)appModel
