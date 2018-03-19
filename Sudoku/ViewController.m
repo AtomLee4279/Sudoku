@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "AppModel.h"
+#import "AppView.h"
 @interface ViewController ()
 @property(nonatomic,strong) NSArray* apps;
 @end
@@ -45,21 +46,19 @@
     {
         int col = i%3;
         int row = i/3;
-        //取出数据存进模型，为后面的控件设置具体内容作准备
-        AppModel *appModel = self.apps[i];
         //生成格子:使用加载xib的方法
-        UIView* appView = [[[NSBundle mainBundle] loadNibNamed:@"appView" owner:nil options:nil] lastObject];
+        AppView* appView = [[[NSBundle mainBundle] loadNibNamed:@"appView" owner:nil options:nil] lastObject];
+        //取出数据存进模型，为xib设置具体内容
+        AppModel *appModel = self.apps[i];
+        appView.appModel = appModel;
         //设置格子位置，尺寸、背景色
         CGFloat appViewX = XMargin+col*(appviewW+spaceXMargin);
         CGFloat appViewY = YMargin+row*(appviewH+spaceYMargin);
         appView.frame = CGRectMake(appViewX,appViewY, appviewW, appviewH);
         appView.backgroundColor = [UIColor grayColor];
-        //获取格子子控件并为它们赋值
-        UIImageView* imageView = appView.subviews[0];//按照xib布局顺序，subviews第一个控件是UIImageView
-        imageView.image = [UIImage imageNamed:appModel.icon];
-        UILabel* label = appView.subviews[1];
-        label.text = appModel.name;
-        [self.view addSubview:appView];
+        
+        
+       
     }
 }
 
