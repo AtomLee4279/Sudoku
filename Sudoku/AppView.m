@@ -28,6 +28,50 @@
     //设置文本内容
     _label.text = appModel.name;
 }
++(instancetype)loadXib
+{
+     AppView* appView = [[[NSBundle mainBundle] loadNibNamed:@"appView" owner:nil options:nil] lastObject];
+    return appView;
+}
+
+- (IBAction)downLoad:(UIButton *)sender
+{
+    UILabel* msgLabel = [[UILabel alloc]init];
+    CGFloat msgLabelW = 80;
+    CGFloat msgLabelH = 30;
+    CGFloat msgLabelX = (self.superview.frame.size.width - msgLabelW)*0.5;
+    CGFloat msgLabelY = (self.superview.frame.size.height- msgLabelH)*0.5;
+    msgLabel.frame = CGRectMake(msgLabelX, msgLabelY, msgLabelW, msgLabelH);
+    msgLabel.backgroundColor = [UIColor redColor];
+    msgLabel.text = @"XXX";
+    msgLabel.textAlignment = NSTextAlignmentCenter;
+    //设置半径
+    msgLabel.layer.cornerRadius = 8;
+    //切掉多余部分
+    msgLabel.layer.masksToBounds = YES;
+    //设置block动画-参数说明：
+    //animations:执行动画代码
+    //completion:动画完成之后要做的事情
+    [UIView animateWithDuration:0.0 animations:^{
+        msgLabel.alpha = 0.6;
+    } completion:^(BOOL finished) {
+        if(finished)
+        {
+            //delay:表示动画延迟多长时间后执行
+            [UIView animateWithDuration:(2.0) delay:0.0 options:(UIViewAnimationOptionCurveLinear) animations:^{
+                msgLabel.alpha = 0.0;
+            } completion:^(BOOL finished) {
+                if(finished)
+                {
+                    [msgLabel removeFromSuperview];//将文本控件从父控件中移除
+                }
+            }];
+        }
+    }];
+    
+    [self.superview addSubview:msgLabel];
+    
+}
 
 
 

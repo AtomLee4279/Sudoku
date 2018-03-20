@@ -49,7 +49,7 @@
         int col = i%totalColumn;
         int row = i/totalRaw;
         //生成格子:使用加载xib的方法
-        AppView* appView = [[[NSBundle mainBundle] loadNibNamed:@"appView" owner:nil options:nil] lastObject];
+        AppView* appView = [AppView loadXib];
         //取出数据存进模型，为xib设置具体内容
         AppModel *appModel = self.apps[i];
         appView.appModel = appModel;
@@ -59,9 +59,6 @@
         CGFloat appViewY = YMargin+row*(appviewH+spaceYMargin);
         appView.frame = CGRectMake(appViewX,appViewY, appviewW, appviewH);
         appView.backgroundColor = [UIColor grayColor];
-        
-        
-       
     }
 }
 

@@ -16,5 +16,6 @@
 -(void)initWithAppModel:(AppModel*)appModel;
 //此处重写了AppModel的set方法
 -(void)setAppModel:(AppModel *)appModel;
-
+- (IBAction)downLoad:(UIButton *)sender;
++(instancetype)loadXib;
 @end
