@@ -51,6 +51,7 @@
         //取出数据存进模型，为xib设置具体内容
         AppModel *appModel = self.apps[i];
         appView.appModel = appModel;
+        [self.view addSubview:appView];
         //设置格子位置，尺寸、背景色
         CGFloat appViewX = XMargin+col*(appviewW+spaceXMargin);
         CGFloat appViewY = YMargin+row*(appviewH+spaceYMargin);
