@@ -40,12 +40,14 @@
     CGFloat spaceYMargin = 50;//y方向上,中间两个格子间的 间隙
     CGFloat appviewW = 100;//格子宽度
     CGFloat appviewH = 120;//格子高度
+    int totalColumn = 3;
+    int totalRaw = 3;
     CGFloat XMargin = (self.view.frame.size.width - 3*appviewW-2*spaceXMargin)*0.5;//x方向，格子与边缘的间隙
     CGFloat YMargin = (self.view.frame.size.height - 3*appviewH-2*spaceYMargin)*0.5;//y方向，格子与边缘的间隙
     for(int i =0;i<self.apps.count;i++)
     {
-        int col = i%3;
-        int row = i/3;
+        int col = i%totalColumn;
+        int row = i/totalRaw;
         //生成格子:使用加载xib的方法
         AppView* appView = [[[NSBundle mainBundle] loadNibNamed:@"appView" owner:nil options:nil] lastObject];
         //取出数据存进模型，为xib设置具体内容
