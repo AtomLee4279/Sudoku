@@ -23,7 +23,6 @@
 		678AFC34205B580F003FCD26 /* Sudoku.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sudoku.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		678AFC37205B580F003FCD26 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		678AFC38205B580F003FCD26 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		678AFC3A205B580F003FCD26 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		678AFC3B205B580F003FCD26 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		678AFC3E205B580F003FCD26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		678AFC40205B580F003FCD26 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -36,6 +35,7 @@
 		67C4BF88205F5F9800A00A3D /* appView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = appView.xib; sourceTree = "<group>"; };
 		67C4BF8A205FA21B00A00A3D /* AppView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppView.h; sourceTree = "<group>"; };
 		67C4BF8B205FA21B00A00A3D /* AppView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppView.m; sourceTree = "<group>"; };
+		67F3EE772061023400D65732 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,23 +68,55 @@
 		678AFC36205B580F003FCD26 /* Sudoku */ = {
 			isa = PBXGroup;
 			children = (
-				678AFC37205B580F003FCD26 /* AppDelegate.h */,
-				678AFC38205B580F003FCD26 /* AppDelegate.m */,
-				678AFC3A205B580F003FCD26 /* ViewController.h */,
-				678AFC3B205B580F003FCD26 /* ViewController.m */,
-				67C4BF8A205FA21B00A00A3D /* AppView.h */,
-				67C4BF8B205FA21B00A00A3D /* AppView.m */,
-				67C4BF88205F5F9800A00A3D /* appView.xib */,
-				678AFC4D205B5FD2003FCD26 /* app.plist */,
-				678AFC4F205B64E5003FCD26 /* AppModel.h */,
-				678AFC50205B64E5003FCD26 /* AppModel.m */,
+				67F3EE762061010800D65732 /* Models */,
+				67F3EE752061010300D65732 /* Views */,
+				67F3EE74206100DD00D65732 /* Controllers */,
+				67F3EE782061083C00D65732 /* Others */,
 				678AFC3D205B580F003FCD26 /* Main.storyboard */,
 				678AFC40205B580F003FCD26 /* Assets.xcassets */,
-				678AFC42205B580F003FCD26 /* LaunchScreen.storyboard */,
+				678AFC4D205B5FD2003FCD26 /* app.plist */,
 				678AFC45205B580F003FCD26 /* Info.plist */,
-				678AFC46205B580F003FCD26 /* main.m */,
+				678AFC42205B580F003FCD26 /* LaunchScreen.storyboard */,
 			);
 			path = Sudoku;
+			sourceTree = "<group>";
+		};
+		67F3EE74206100DD00D65732 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				67F3EE772061023400D65732 /* ViewController.h */,
+				678AFC3B205B580F003FCD26 /* ViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		67F3EE752061010300D65732 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				67C4BF88205F5F9800A00A3D /* appView.xib */,
+				67C4BF8A205FA21B00A00A3D /* AppView.h */,
+				67C4BF8B205FA21B00A00A3D /* AppView.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		67F3EE762061010800D65732 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				678AFC4F205B64E5003FCD26 /* AppModel.h */,
+				678AFC50205B64E5003FCD26 /* AppModel.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		67F3EE782061083C00D65732 /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				678AFC46205B580F003FCD26 /* main.m */,
+				678AFC37205B580F003FCD26 /* AppDelegate.h */,
+				678AFC38205B580F003FCD26 /* AppDelegate.m */,
+			);
+			path = Others;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
