@@ -52,7 +52,7 @@
     //设置block动画-参数说明：
     //animations:执行动画代码
     //completion:动画完成之后要做的事情
-    [UIView animateWithDuration:0.0 animations:^{
+    [UIView animateWithDuration:1.0 animations:^{
         msgLabel.alpha = 0.6;
     } completion:^(BOOL finished) {
         if(finished)
